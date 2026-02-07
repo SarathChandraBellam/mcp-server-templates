@@ -1,0 +1,13 @@
+[project]
+name = "mcp-products-http"
+version = "0.1.0"
+description = "MCP server template — Streamable HTTP transport with tools, resources, and prompts"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.2.0",
+]
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.uv.sources]
