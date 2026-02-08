@@ -10,7 +10,8 @@ Each template is a **standalone project** — copy a folder and start building y
 |---|-----------|--------|------------|-------------|
 | 01 | **stdio** | [python/01-stdio-server](python/01-stdio-server/) | [typescript/01-stdio-server](typescript/01-stdio-server/) | Client launches server as subprocess, communicates via stdin/stdout |
 | 02 | **Streamable HTTP** | [python/02-streamable-http-server](python/02-streamable-http-server/) | [typescript/02-streamable-http-server](typescript/02-streamable-http-server/) | Server runs as HTTP endpoint with optional SSE streaming |
-| 03 | **Auth (OAuth)** | [python/03-auth-oauth-server](python/03-auth-oauth-server/) | — | Streamable HTTP + Auth0 OAuth using Resource Server pattern |
+| 03 | **Auth (Auth0)** | [python/03-auth-oauth-server](python/03-auth-oauth-server/) | — | Streamable HTTP + Auth0 OAuth using Resource Server pattern |
+| 04 | **Auth (Okta)** | [python/04-okta-oauth-server](python/04-okta-oauth-server/) | — | Streamable HTTP + Okta OAuth using Resource Server pattern |
 
 ## What Each Template Demonstrates
 
@@ -20,7 +21,8 @@ Every template showcases all three MCP server features (Tools, Resources, Prompt
 |----------|-----------|-------|-----------|---------|
 | **01 stdio** | Notes app (in-memory) | `add_note`, `search_notes` | `notes://list`, `notes://{name}` | `summarize_notes` |
 | **02 HTTP** | Product catalog (JSON file) | `add_product`, `search_products` | `products://all`, `products://{id}` | `analyze_catalog` |
-| **03 Auth** | Task manager (JSON file) | `create_task`, `list_tasks` | `tasks://all`, `tasks://{id}` | `prioritize_tasks` |
+| **03 Auth (Auth0)** | Task manager (JSON file) | `create_task`, `list_tasks` | `tasks://all`, `tasks://{id}` | `prioritize_tasks` |
+| **04 Auth (Okta)** | Incident tracker (JSON file) | `create_incident`, `list_incidents` | `incidents://all`, `incidents://{id}` | `triage_incidents` |
 
 ## Prerequisites
 
@@ -66,6 +68,7 @@ Key protocol details:
 ## Guides
 
 - [**MCP OAuth Guide**](docs/mcp-oauth-guide.md) — Deep dive into OAuth in MCP: Resource Server vs Authorization Server patterns, spec evolution, how GitHub does it, and step-by-step Auth0 integration
+- [**MCP Primitives Guide**](docs/mcp-primitives-guide.md) — Tools vs Resources vs Prompts: control models, end-to-end use cases, and when to use each primitive. Also covers Prompts vs Skills (slash commands)
 
 ## Project Structure
 
@@ -74,7 +77,8 @@ mcp-server-templates/
 ├── README.md
 ├── .gitignore
 ├── docs/
-│   └── mcp-oauth-guide.md        # OAuth patterns tutorial
+│   ├── mcp-oauth-guide.md        # OAuth patterns tutorial
+│   └── mcp-primitives-guide.md   # Tools vs Resources vs Prompts
 ├── python/
 │   ├── 01-stdio-server/          # Standalone uv project
 │   │   ├── pyproject.toml
@@ -85,12 +89,19 @@ mcp-server-templates/
 │   │   ├── server.py
 │   │   ├── products.json
 │   │   └── README.md
-│   └── 03-auth-oauth-server/
+│   ├── 03-auth-oauth-server/
+│   │   ├── pyproject.toml
+│   │   ├── .env.example
+│   │   ├── auth.py
+│   │   ├── server.py
+│   │   ├── tasks.json
+│   │   └── README.md
+│   └── 04-okta-oauth-server/
 │       ├── pyproject.toml
 │       ├── .env.example
 │       ├── auth.py
 │       ├── server.py
-│       ├── tasks.json
+│       ├── incidents.json
 │       └── README.md
 └── typescript/
     ├── 01-stdio-server/          # Standalone npm project
