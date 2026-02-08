@@ -1,0 +1,18 @@
+{
+  "name": "mcp-stdio-server",
+  "version": "1.0.0",
+  "description": "MCP server template — stdio transport (Notes app)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

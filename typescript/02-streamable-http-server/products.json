@@ -1,0 +1,26 @@
+{
+  "1": {
+    "id": "1",
+    "name": "Mechanical Keyboard",
+    "price": 89.99,
+    "category": "electronics"
+  },
+  "2": {
+    "id": "2",
+    "name": "Standing Desk",
+    "price": 349.00,
+    "category": "furniture"
+  },
+  "3": {
+    "id": "3",
+    "name": "USB-C Hub",
+    "price": 29.99,
+    "category": "electronics"
+  },
+  "4": {
+    "id": "4",
+    "name": "Desk Lamp",
+    "price": 45.50,
+    "category": "furniture"
+  }
+}

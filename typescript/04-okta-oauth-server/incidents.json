@@ -1,0 +1,26 @@
+{
+  "1": {
+    "id": "1",
+    "title": "Database connection timeout in production",
+    "severity": "critical",
+    "status": "investigating"
+  },
+  "2": {
+    "id": "2",
+    "title": "Login page CSS broken on mobile",
+    "severity": "low",
+    "status": "open"
+  },
+  "3": {
+    "id": "3",
+    "title": "Payment processing delays over 30s",
+    "severity": "high",
+    "status": "open"
+  },
+  "4": {
+    "id": "4",
+    "title": "Stale cache after deployment",
+    "severity": "medium",
+    "status": "resolved"
+  }
+}
