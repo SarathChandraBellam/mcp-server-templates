@@ -9,17 +9,10 @@ Minimal calculator MCP server using **Streamable HTTP** transport and the Python
 - `add(a, b)` returns the sum
 - `sub(a, b)` returns the difference
 
-## Setup
+## Setup & Run
 
 ```bash
-uv venv
-source .venv/bin/activate
-uv pip install "mcp[cli]>=1.2.0"
-```
-
-## Run
-
-```bash
+uv sync
 uv run server.py
 ```
 

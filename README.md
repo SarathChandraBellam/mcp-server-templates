@@ -48,8 +48,7 @@ These templates do not currently include:
 
 ```bash
 cd stdio/python
-uv venv && source .venv/bin/activate
-uv pip install "mcp[cli]>=1.2.0"
+uv sync
 uv run server.py
 ```
 
@@ -66,8 +65,7 @@ npm start
 
 ```bash
 cd http-remote/python
-uv venv && source .venv/bin/activate
-uv pip install "mcp[cli]>=1.2.0"
+uv sync
 uv run server.py
 ```
 
@@ -98,10 +96,6 @@ mcp-server-templates/
     └── typescript/
 ```
 
-## Docs
-
-- [docs/mcp-primitives-guide.md](docs/mcp-primitives-guide.md) explains why this repo currently demonstrates tools only.
-- [docs/mcp-oauth-guide.md](docs/mcp-oauth-guide.md) explains where OAuth fits once you move beyond these minimal templates.
 
 ## License
 
