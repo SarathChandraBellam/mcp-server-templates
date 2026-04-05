@@ -1,0 +1,13 @@
+[project]
+name = "mcp-calculator-stdio"
+version = "0.1.0"
+description = "Minimal MCP calculator template over stdio"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.2.0",
+]
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.uv.sources]

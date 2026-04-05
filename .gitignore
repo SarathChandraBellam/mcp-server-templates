@@ -31,3 +31,5 @@ uv.lock
 # Environment
 .env
 .env.local
+
+.claude/
